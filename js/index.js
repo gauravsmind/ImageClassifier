@@ -1,8 +1,6 @@
 const webcamElement = document.getElementById('webcam');
 const classifier = knnClassifier.create();
 
-var person = prompt("Please enter your name", "Harry Potter");
-
 let net;
 
 async function app() {
@@ -41,6 +39,7 @@ async function app() {
       document.getElementById('console').innerText = `
         prediction: ${classes[result.classIndex]}\n
         probability: ${result.confidences[result.classIndex]}
+      
       `;
     }
 

@@ -1,19 +1,48 @@
 <html>
   <head>
     <!-- Load the latest version of TensorFlow.js -->
-    <title>Hello World: Example of Image Classification using knn-classifier </title>
+    <title>Example of Image Classification using knn-classifier </title>
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
   </head>
   <body>
-    <div id="console"></div>
-    <!-- Add an image that we will use to test -->
-    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-    <!-- Load index.js after the content of the page -->
+    <!-- Load the latest version of TensorFlow.js -->
+    <h2>Let's train and test Image Classifier using knn-classifier.</h2>
+    <h5>Please ensure you allow webcam access to this application when prompted.</h5>
+    <table style="height: 30px; float: top;" border="1" width="960">
+      <tbody>
+        <tr>
+          <td style="width: 320px;"><!-- Add an image that we will use to test -->
+            <h3><p style="text-align:center;">Inputs</p></h3>
+          </td>
+          <td style="width: 320px;">
+            <h3><p style="text-align:center;">Training</p></h3>
+          </td>
+          <td style="width: 320px;">
+            <h3><p style="text-align:center;">Predictions</p></h3>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 320px;"><!-- Add an image that we will use to test -->
+            <p style="text-align:center;"><video id="webcam" autoplay="autoplay" muted="" width="300" height="300"></video></p>
+          </td>
+          <td style="width: 320px;">
+            <h5>Show a picture for each category and click the corresponding button.</h5>
+            <p style="text-align:center;"><button id="class-a">Add Sample for Category A</button></p>
+            <p style="text-align:center;"><button id="class-b">Add Sample for Category B</button></p>
+            <p style="text-align:center;"><button id="class-c">Add Sample for Category C</button></p>
+          </td>
+          <td style="width: 320px;">
+            <div id="console">&nbsp;</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We have used pre-trained models <a href="https://unpkg.com/browse/@tensorflow-models/mobilenet@2.0.4/">mobilenet</a>
+       and <a href="https://unpkg.com/browse/@tensorflow-models/knn-classifier@1.2.1/">knn-classifier</a> of tensorflow</p>
+<!-- Load index.js after the content of the page -->
     <script src="js/index.js"></script>
-    <button id="class-a">Add A</button>
-    <button id="class-b">Add B</button>
-    <button id="class-c">Add C</button>
+<p><img src="https://www.tensorflow.org/resources/images/tf-logo-card-16x9.png" alt="Powered by TensorFlow" width="160" height="90"></p>
   </body>
 </html>
